@@ -1,0 +1,60 @@
+<div class="main-center">
+
+    <div class="account-requested" *ngIf=requested>
+        <h3>SignUp ..!!!</h3>
+
+
+    </div>
+    <form *ngIf=!requested (ngSubmit)="!signupForm.invalid && handleSignup()" #signupForm="ngForm">
+
+        <div style="font-family: cursive;">
+            <h3>SignUp ..!!!</h3>
+        </div>
+
+        <div class="Input">
+            <Input type="text" placeholder="UserName" id="userName" [(ngModel)]="userName" name="userName" ngDefaultControl required/>
+        </div>
+        <div class="Input">
+            <Input type="text" placeholder="Email Id" id="emailId" [(ngModel)]="emailId" name="emailId" ngDefaultControl required />
+        </div>
+        <div class="Input">
+            <Input type="text" placeholder="First Name" id="fName" [(ngModel)]="fName" name="fName" ngDefaultControl required/>
+        </div>
+        <div class="Input">
+            <Input type="text" placeholder="Last Name" id="lName" [(ngModel)]="lName" name="lName" ngDefaultControl required/>
+        </div>
+        <div class="Input">
+            <Input type="text" placeholder="Password" id="password" [(ngModel)]="password" name="password" ngDefaultControl required/>
+        </div>
+        <div class="Input">
+            <Input type="number" placeholder="Phone Number" id="phone" [(ngModel)]="phone" name="phone" ngDefaultControl required/>
+        </div>
+
+        <div class="Input" id="selection">
+            <p style="margin-top: 20px;">Location of Joining</p>
+            <select [(ngModel)]="selectedValue" name="locations" style="margin-top: 0;" required>
+      <option *ngFor="let c of locations" [value]="c.key">{{c.name}}</option>
+    </select>
+        </div>
+
+
+        <!-- <div class="Input">
+          <select name="location" id="location" [(ngModel)]="location" ngDefaultControl>
+      <option selected >-Location-</option>
+      <option value="Noida">Noida</option>
+      <option value="Gurugram">Gurugram</option>
+      <option value="Banglore">Banglore</option>
+      <option value="Hydrabad">Hydrabad</option>
+    </select>
+
+      </div> -->
+
+
+
+        <button type="submit">SignUp...</button>
+
+
+    </form>
+
+    <button [routerLink]="['/login']" routerLinkActive="router-link-active">login</button>
+</div>

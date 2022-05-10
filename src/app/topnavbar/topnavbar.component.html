@@ -1,0 +1,33 @@
+<nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">{{logo}}</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <li *ngIf="this.authService.isLoggedIn()"><button (click)=showHome()>Home</button></li>
+            <!-- [routerLink]="[{ outlets: { primary: ['path'],sidebar: ['path'] } }]" -->
+            <li *ngIf="this.authService.isLoggedIn()&&this.authService.isAccType()==='0' "><button routerLink='task' (click)=showTask()>Task</button></li>
+            <li *ngIf="this.authService.isLoggedIn()" class="services">
+                <a><button>Service</button></a>
+                <!-- DROPDOWN MENU -->
+                <ul class="dropdown">
+                    <li><a routerLink='user'>Show Users</a></li>
+                    <li><a [routerLink]="['/feedbackSent']" routerLinkActive="router-link-active">View Feedbacks</a></li>
+                    <li><a href="/">Dropdown 2</a></li>
+                    <li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>
+                </ul>
+            </li>
+            <li *ngIf="this.authService.isLoggedIn()&&this.authService.isAccType()==='0'"><button [routerLink]="['feedback']" routerLinkActive="router-link-active">Feedback</button></li>
+            <li *ngIf="this.authService.isLoggedIn()&&this.authService.isAccType()!=='0'"><button [routerLink]="['contact']" routerLinkActive="router-link-active">Contact</button></li>
+            <li *ngIf="!this.authService.isLoggedIn()"><button [routerLink]="['login']" routerLinkActive="router-link-active">Login</button></li>
+            <li *ngIf="!this.authService.isLoggedIn()"><button routerLink='signup' routerLinkActive="router-link-active">Signup</button></li>
+            <li *ngIf="this.authService.isLoggedIn()">
+                <a routerLink='profile' (click)=getUserProfileData()><img src="../../assets/icons/user.svg " width="20px " height="20px " /></a>
+            </li>
+        </div>
+    </ul>
+</nav>
+
+<!-- [routerLink]="[{ outlets: { Views: [ 'test'] } }] " routerLinkActive="active " -->

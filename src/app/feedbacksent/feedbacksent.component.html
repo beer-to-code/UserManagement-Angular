@@ -1,0 +1,18 @@
+<a (click)=feedbackDetail(feed.id) *ngFor="let feed of feeds">
+    <div class="feedcard">
+        <div>
+            <div style="background-image: url(urlx)">
+                <h2>{{feed.name}}</h2>
+                <hr>
+                <small>{{feed.email}}</small><br />
+                <hr>
+                <div class="replys">
+
+                    <span>{{feed.reply}}</span>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</a>

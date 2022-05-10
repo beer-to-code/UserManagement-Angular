@@ -1,0 +1,30 @@
+.feedcard {
+    background-color: rgb(85, 192, 192);
+    font-size: medium;
+    width: 150px;
+    height: 200px;
+    float: left;
+    margin: 15px;
+    border: 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+hr {
+    width: 80%;
+}
+
+small {
+    float: right;
+}
+
+.replys {
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    align-items: stretch;
+    background-color: bisque;
+    border: 2px;
+    border-color: aliceblue;
+    border-radius: 5px;
+}

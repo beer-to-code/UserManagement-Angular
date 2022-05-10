@@ -1,0 +1,41 @@
+<div class="main-center">
+
+
+    <form (ngSubmit)="!loginForm.invalid && handleLogin()" #loginForm="ngForm">
+        <!-- (ngSubmit)="onLogin(f) " #f="ngForm ">   -->
+
+        <div style="font-family: cursive; ">
+            <h1>Login Panel</h1>
+            <small *ngIf='invalidLogin'>Invalid Creds</small>
+        </div>
+
+        <div class="input-section ">
+            <div>
+
+                <input type="text " id="userName " [(ngModel)]="userName " name="userName " placeholder="User Name " class="inputSection " required="required">
+
+            </div>
+
+            <!-- <div style="display: none; ">
+
+      <input type="email " id="emailId "  name="emailId " placeholder="Email Id " class="inputSection "
+        required email>
+
+    </div> -->
+            <div>
+
+                <input type="password " id="passwd " [(ngModel)]="password " name="passwd " placeholder="Password " class="inputSection " required="required">
+
+            </div>
+
+
+        </div>
+
+        <button type="submit ">Login..</button>
+
+
+    </form>
+
+    <button [routerLink]="['/signup']" routerLinkActive="router-link-active">Signup</button>
+
+</div>

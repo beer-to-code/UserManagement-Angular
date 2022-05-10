@@ -1,0 +1,28 @@
+<small>{{warning}}</small>
+<table class="table table-bordered" id="table">
+    <thead>
+
+        <th>Name</th>
+        <th>EMail</th>
+        <th>Message</th>
+        <th>Action</th>
+
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let contact of contacts ">
+
+            <!-- <tr *ngFor="let user of users |  namefilter:filterName:'name'"> -->
+            <td>{{contact.name}}</td>
+            <td>{{contact.email}}</td>
+            <td>{{contact.message}}</td>
+            <!-- <td style="width:auto;" *ngIf="user.accessStatus=='!APPR'"><button (click)="statusChange('a',user.id)">Approve</button><button (click)="statusChange('r',user.id)">Reject</button><button (click)="statusChange('i',user.id)">In Progress</button></td> -->
+            <td style="width:auto;">
+                <input type="text" class="form-control" placeholder="Enter Your Reverting Feedback here ..." name="feedBack" [(ngModel)]="contact.feedBack">
+                <button (click)="sendFeed(contact.feedBack,contact.id,contact.email)" style="float: right;background-color: #04AA6D;">Send</button>
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>

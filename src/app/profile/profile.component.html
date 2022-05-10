@@ -1,0 +1,95 @@
+<body>
+    <div class="main-content">
+        <div class="container mt-7">
+            <!-- Table -->
+            <div class="row">
+                <div class="col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0">
+                    <div class="card card-profile shadow">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 order-lg-2">
+                                <div class="card-profile-image">
+                                    <a href="#">
+                                        <img src="../../assets/images/dkp.jpg" class="rounded-circle">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                            <div class="d-flex justify-content-between">
+                                <!-- <a routerLink="/logout" class="btn btn-sm btn-info mr-4">Logout</a> -->
+                                <button class="btn btn-sm btn-info mr-4" (click)=logout()>Logout</button>
+
+                                <!-- <a href="#" class="btn btn-sm btn-default float-right">Save</a>
+                              <a href="#" class="btn btn-sm btn-default float-right">Edit</a> -->
+                                <button class="btn btn-sm btn-default float-right" (click)=allowEdits() *ngIf=!allowEdit>Edit</button>
+                                <button class="btn btn-sm btn-success float-right" style="background-color: #2dce89;" (click)=saveEdits() *ngIf=allowEdit>Save</button>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0 pt-md-4">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="details">
+                                <!-- <table border="1" id="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let user of users">
+                                            <td>{{user}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table> -->
+
+
+
+                                <input type="text" value="{{Name}}" [disabled]="!allowEdit">
+                            </div>
+                            <div class="details ">
+                                <input value="{{Position}}" [disabled]="!allowEdit">
+                            </div>
+                            <div class="details ">
+                                <input value="{{Location}}" [disabled]="!allowEdit">
+                            </div>
+                            <div class="details ">
+                                <input value="Cabin-ODC-1-14 " [disabled]="!allowEdit">
+                            </div>
+
+
+                            <!-- <div class="text-center ">
+                              <div>
+                                  <i class="ni education_hat mr-2 "></i>
+                                  <input value="Deepesh Kumar Pandey ">
+                                  <span class="font-weight-light ">, 27</span>
+                              </div>
+                              <div>
+                                  <i class="ni location_pin mr-2 "></i>
+                                  <input value="Noida INF ">
+
+                              </div>
+                              <div>
+                                  <i class="ni business_briefcase-24 mr-2 "></i>
+                                  <input value="Programmer Analyst Trainee ">
+
+                              </div>
+                              <div>
+                                  <i class="ni education_hat mr-2 "></i>
+                                  <input value="Cabin : ODC - 1 ">
+
+                              </div>
+                          </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

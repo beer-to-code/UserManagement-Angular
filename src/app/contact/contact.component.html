@@ -1,0 +1,40 @@
+<section id="contact">
+    <div class="contact-box">
+        <div class="contact-links">
+            <h2>CONTACT</h2>
+            <div class="links">
+                <div class="link">
+                    <a><img src="../../assets/icons/linkedin-logo.png" alt="linkedin"></a>
+                </div>
+                <div class="link">
+                    <a><img src="../../assets/icons//github.png" alt="github"></a>
+                </div>
+                <div class="link">
+                    <a><img src="../../assets/icons/phone-call.png" alt="phone"></a>
+                </div>
+                <div class="link">
+                    <a><img src="../../assets/icons/email.png" alt="email"></a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-wrapper">
+            <form *ngIf=!requested (ngSubmit)="!signupForm.invalid && submitContact()" #signupForm="ngForm">
+                <h3 id="statusMsg">{{statusMessage}}</h3>
+                <div class="form-item">
+                    <input type="text" name="name" [(ngModel)]="name" ngDefaultControl required>
+                    <label>Name:</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="email" [(ngModel)]="email" ngDefaultControl required>
+                    <label>Email:</label>
+                </div>
+                <div class="form-item">
+                    <textarea class="" name="message" [(ngModel)]="message" ngDefaultControl required></textarea>
+                    <label>Message:</label>
+                </div>
+                <button class="submit-btn" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <!-- {{name}}{{email}}{{message}} -->
+</section>

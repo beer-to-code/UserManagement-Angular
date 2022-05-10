@@ -1,0 +1,95 @@
+<h3>Angular - Display a list of items with ngFor</h3>
+<div>
+    <table border="1" id="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Designation</th>
+                <th>User Name</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Access Status</th>
+                <th>Changed By</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.designation}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.fName}} {{user.lName}}</td>
+                <td>{{user.emailId}}</td>
+                <td>{{user.phone}}</td>
+                <td>{{user.location}}</td>
+                <td>{{user.accessStatus}}</td>
+                <!-- <td><select>
+                  <option>Approve</option>
+                  <option>In Progress</option>
+                  <option>Rejected</option>
+                </select></td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+directive 
+    struct
+    attr
+    compone
+
+pipe
+    data transform in template
+
+    pure 
+    impure
+    
+form
+
+    template driven
+    reactive forms
+
+gaurds
+    5
+        can load
+        activ
+        resolve
+        can act
+        deact
+
+component data flow 
+        parent -> child
+        @Input()
+
+        child -> parent 
+        @output()
+
+        view child decorator 
+
+        services
+
+observable
+    subject 
+    behav subject
+
+
+data binding 
+
+
+lifecycle hooks
+
+content projection -->

@@ -1,0 +1,49 @@
+<div style="display: block;" id="rulesformitem" class="formitem">
+    <div class="textwrapper">
+        <textarea cols="2" rows="10" id="rules"></textarea>
+    </div>
+    <div>
+        <img src="../../../../assets/icons/send.jpg" style="float: left;" id="icon" />
+        <img src="../../../../assets/icons/send.jpg" style="float: left;" id="icon" />
+        <img src="../../../../assets/icons/send.jpg" style="float: left;" id="icon" />
+        <img src="../../../../assets/icons/send.jpg" style="float: left;" id="icon" />
+    </div>
+
+</div>
+
+
+
+<p *ngIf="postType=='images'">
+    <!-- images -->
+    <button [routerLink]="['car']" routerLinkActive="router-link-active">Car</button>
+    <button [routerLink]="['art']" routerLinkActive="router-link-active">art</button>
+    <button [routerLink]="['girls']" routerLinkActive="router-link-active">girls</button>
+    <button [routerLink]="['boys']" routerLinkActive="router-link-active">boys</button>
+</p>
+<p *ngIf='postType=="text"'>
+    <!-- images -->
+    <button [routerLink]="['News']" routerLinkActive="router-link-active">News</button>
+    <button [routerLink]="['art']" routerLinkActive="router-link-active">Motivation</button>
+    <button [routerLink]="['girls']" routerLinkActive="router-link-active">Health</button>
+    <button [routerLink]="['boys']" routerLinkActive="router-link-active">Potry</button>
+</p>
+<p *ngIf="postType==='technical'">
+    <!-- images -->
+    <button [routerLink]="['gadgets']" routerLinkActive="router-link-active">Gadgets</button>
+    <button [routerLink]="['art']" routerLinkActive="router-link-active">Latest</button>
+    <button [routerLink]="['girls']" routerLinkActive="router-link-active">Softwares</button>
+    <button [routerLink]="['boys']" routerLinkActive="router-link-active">Cameras</button>
+    <button [routerLink]="['boys']" routerLinkActive="router-link-active">Phones</button>
+    <button [routerLink]="['boys']" routerLinkActive="router-link-active">Others</button>
+</p>
+<p *ngIf="postType==='portfolio'">
+    <!-- portfolio -->
+    <button [routerLink]="['models']" routerLinkActive="router-link-active">Models</button>
+    <button [routerLink]="['art']" routerLinkActive="router-link-active">Actress</button>
+    <button [routerLink]="['girls']" routerLinkActive="router-link-active">Actor</button>
+    <button [routerLink]="['boys']" routerLinkActive="router-link-active">Hollywood</button>
+</p>
+
+<div id="middlebox">
+    <router-outlet></router-outlet>
+</div>

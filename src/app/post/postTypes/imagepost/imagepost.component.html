@@ -1,0 +1,16 @@
+<div *ngFor="let item of postData|postfilter:catagory" id="post">
+    <div id="head">
+        <h3>Posted By</h3><small>designation</small>
+    </div>
+    <div id="image">
+        <img src="../../../../assets/images/post/{{catagory}}/{{item.postLink}}.jpeg" />
+    </div>
+    <div id="action">
+        <img src="../../../../assets/icons/like.jpg" style="float: left;" id="icon" />
+        <input type="text" class="form-control" style="float: left;" placeholder="Search" oninput="this.value = this.value.toUpperCase()" name="userName" [(ngModel)]="userName">
+        <img src="../../../../assets/icons/send.jpg" style="float: left;" id="icon" />
+
+
+    </div>
+
+</div>
